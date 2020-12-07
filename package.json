@@ -1,0 +1,31 @@
+{
+	"name": "moon_app",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "cross-env NODE_ENV=\"development\" webpack serve --config webpack.config.js",
+		"build": "cross-env NODE_ENV=\"production\" webpack --config webpack.config.js"
+	},
+	"dependencies": {
+		"moon": "latest"
+	},
+	"devDependencies": {
+		"@babel/core": "latest",
+		"@babel/preset-env": "latest",
+		"babel-loader": "latest",
+		"clean-webpack-plugin": "latest",
+		"cross-env": "^7.0.3",
+		"css-loader": "^1.0.1",
+		"file-loader": "latest",
+		"html-webpack-plugin": "latest",
+		"mini-css-extract-plugin": "latest",
+		"moon-compiler": "latest",
+		"moon-loader": "latest",
+		"optimize-css-assets-webpack-plugin": "latest",
+		"purgecss-webpack-plugin": "latest",
+		"terser-webpack-plugin": "latest",
+		"webpack": "^5.0.0-rc.3",
+		"webpack-cli": "^4.0.0-rc.0",
+		"webpack-dev-server": "^3.11.0"
+	}
+}

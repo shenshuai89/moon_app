@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moon</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="./moon.min.js"></script>
+  <script src="./moon-browser.min.js"></script>
+
+  <script type="text/moon">
+    const viewTodos = ({ data }) =>
+    <ul children=(data.todos.map(todo =>
+        <li>{todo}</li>
+    ))/>;
+
+Moon.use({
+    data: Moon.data.driver,
+    view: Moon.view.driver("#root")
+});
+
+Moon.run(() => {
+    const data = {
+        todo: "",
+        todos: [
+            "Learn Moon",
+            "Take a nap",
+            "Go Shopping"
+        ]
+    };
+
+    return {
+        data,
+        view: <viewTodos data=data/>
+    };
+});
+  </script>
+</body>
+
+</html>
