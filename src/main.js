@@ -8,12 +8,10 @@ Moon.use({
 });
 
 Moon.run(() => {
-	const data = {
-		name: "Moon"
-	};
+	const data =0
 
 	return {
 		data,
-		view: <view.home data=data/>
+		view: <view.add data=data/>
 	};
 });
